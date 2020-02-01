@@ -1,7 +1,5 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Domain.Pages;
+using NUnit.Framework;
 
 namespace Domain.Tests
 {
@@ -10,6 +8,7 @@ namespace Domain.Tests
         [Test]
         public void TestMethod()
         {
+            new BasePage().Navigation.NavigateTo(Globals.BaseUrl);
             Assert.True(true);
         }
     }
