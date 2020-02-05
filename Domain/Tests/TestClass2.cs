@@ -4,10 +4,10 @@ using NUnit.Framework;
 namespace Domain.Tests
 {
     [Parallelizable]
-    public class TestClass1 : TestSetUp
+    public class TestClass2 : TestSetUp
     {
         [Test]
-        public void TestClass1Method1()
+        public void TestClass2Method1()
         {
             new DomainBasePage(Interactions).Navigation.NavigateTo(Globals.BaseUrl);
             new DomainBasePage(Interactions).Header.ClickSignInButton();
@@ -15,7 +15,7 @@ namespace Domain.Tests
         }
 
         [Test]
-        public void TestClass1Method2()
+        public void TestClasss2Method2()
         {
             new DomainBasePage(Interactions).Navigation.NavigateTo(Globals.BaseUrl);
             new DomainBasePage(Interactions).Header.ClickSignInButton();

@@ -1,7 +1,7 @@
 ﻿namespace Domain
 {
-    public static class Globals
+    internal static class Globals
     {
-        public static readonly string BaseUrl = "https://techblog.polteq.com/testshop";
+        internal static readonly string BaseUrl = "https://techblog.polteq.com/testshop";
     }
 }

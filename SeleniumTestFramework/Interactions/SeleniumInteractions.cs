@@ -1,12 +1,10 @@
 ﻿using OpenQA.Selenium;
 using SeleniumTestFramework.Enum;
-using SeleniumTestFramework.Interactions;
 
-namespace SeleniumTestFramework
+namespace SeleniumTestFramework.Interactions
 {
-    public class BaseInteractions
+    public class SeleniumInteractions
     {
-        protected IWebDriver Driver { get; }
         public SeleniumElement Element { get; }
         public SeleniumButton Button { get; }
         public SeleniumIframe Iframe { get; }
@@ -14,8 +12,10 @@ namespace SeleniumTestFramework
         public SeleniumLabel Label { get; }
         public SeleniumSelect Select { get; }
         public SeleniumNavigation Navigation { get; }
+        
+        protected IWebDriver Driver;
 
-        public BaseInteractions()
+        public SeleniumInteractions()
         {
             Driver = new BrowserFactory().GetWebDriver(Browser.Chrome);
             Element = new SeleniumElement(Driver);
@@ -25,6 +25,16 @@ namespace SeleniumTestFramework
             Label = new SeleniumLabel(Driver);
             Select = new SeleniumSelect(Driver);
             Navigation = new SeleniumNavigation(Driver);
+        }
+
+        public void StartTest()
+        {
+        }
+
+        public void EndDriver()
+        {
+            Driver.Quit();
+            Driver = null;
         }
     }
 }
