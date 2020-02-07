@@ -34,7 +34,7 @@ namespace SeleniumTestFramework.Interactions
         public void EndDriver()
         {
             Driver.Quit();
-            Driver = null;
+            //Driver = null;
         }
     }
 }
