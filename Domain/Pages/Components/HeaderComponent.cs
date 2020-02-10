@@ -6,14 +6,14 @@ namespace Domain.Pages.Components
     internal class HeaderComponent : BaseInteractions
     {
         #region elements
-        private By BtnSignIn => By.XPath("//* [@class='login']");
+        private By BtnSignIn => By.ClassName("login");
         #endregion
 
         internal HeaderComponent(SeleniumInteractions interactions) : base(interactions)
         {
         }
 
-        internal void ClickSignInButton()
+        internal void ClickSignIn()
         {
             Button.Click(BtnSignIn);
         }

@@ -10,7 +10,6 @@ namespace Domain.Tests
         public void TestClass2Method1()
         {
             new DomainBasePage(Interactions).Navigation.NavigateTo(Globals.BaseUrl);
-            new DomainBasePage(Interactions).Header.ClickSignInButton();
             Assert.True(true);
         }
 
@@ -18,7 +17,6 @@ namespace Domain.Tests
         public void TestClasss2Method2()
         {
             new DomainBasePage(Interactions).Navigation.NavigateTo(Globals.BaseUrl);
-            new DomainBasePage(Interactions).Header.ClickSignInButton();
             Assert.True(true);
         }
     }

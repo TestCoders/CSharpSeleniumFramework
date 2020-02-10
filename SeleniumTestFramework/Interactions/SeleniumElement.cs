@@ -41,12 +41,13 @@ namespace SeleniumTestFramework.Interactions
 
             try
             {
-                //jse.ExecuteScript("document.readyState = 'ready'");
+                Wait(5).Until(driver => jse.ExecuteScript("return document.readyState").Equals("complete"));
             }
             catch (Exception ex)
             {
                 if (ex is WebDriverTimeoutException || ex is TimeoutException)
                 {
+                    Console.WriteLine("Time out exception during page load. Moving on..");
                     return;
                 }
                 else
